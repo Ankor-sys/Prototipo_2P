@@ -32,5 +32,13 @@ namespace CapaVista
 
             forma.Show();
         }
+
+        private void nominaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNomina forma = new frmNomina();
+            forma.MdiParent = this;
+
+            forma.Show();
+        }
     }
 }

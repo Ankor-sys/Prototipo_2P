@@ -116,6 +116,7 @@
             this.nominaToolStripMenuItem.Name = "nominaToolStripMenuItem";
             this.nominaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nominaToolStripMenuItem.Text = "Nomina";
+            this.nominaToolStripMenuItem.Click += new System.EventHandler(this.nominaToolStripMenuItem_Click);
             // 
             // MDI
             // 

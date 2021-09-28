@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -41,14 +42,32 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelNombreaplicacion = new System.Windows.Forms.Label();
             this.labelIdaplicacion = new System.Windows.Forms.Label();
+            this.dataSet1 = new CapaVista.DataSet1();
+            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet2 = new CapaVista.DataSet2();
+            this.puestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.puestoTableAdapter = new CapaVista.DataSet2TableAdapters.puestoTableAdapter();
+            this.codigopuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrepuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatuspuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbxEstado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puestoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigopuestoDataGridViewTextBoxColumn,
+            this.nombrepuestoDataGridViewTextBoxColumn,
+            this.estatuspuestoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.puestoBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(144, 273);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(525, 150);
@@ -62,6 +81,7 @@
             this.btnLimpiar.TabIndex = 48;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEliminar
             // 
@@ -71,6 +91,7 @@
             this.btnEliminar.TabIndex = 47;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -80,6 +101,7 @@
             this.btnModificar.TabIndex = 46;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // textBox3
             // 
@@ -139,6 +161,7 @@
             this.btnInsertar.TabIndex = 41;
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // textBox1
             // 
@@ -167,6 +190,48 @@
             this.labelIdaplicacion.TabIndex = 42;
             this.labelIdaplicacion.Text = "ID Aplicación:";
             // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataSet1BindingSource
+            // 
+            this.dataSet1BindingSource.DataSource = this.dataSet1;
+            this.dataSet1BindingSource.Position = 0;
+            // 
+            // dataSet2
+            // 
+            this.dataSet2.DataSetName = "DataSet2";
+            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // puestoBindingSource
+            // 
+            this.puestoBindingSource.DataMember = "puesto";
+            this.puestoBindingSource.DataSource = this.dataSet2;
+            // 
+            // puestoTableAdapter
+            // 
+            this.puestoTableAdapter.ClearBeforeFill = true;
+            // 
+            // codigopuestoDataGridViewTextBoxColumn
+            // 
+            this.codigopuestoDataGridViewTextBoxColumn.DataPropertyName = "codigo_puesto";
+            this.codigopuestoDataGridViewTextBoxColumn.HeaderText = "codigo_puesto";
+            this.codigopuestoDataGridViewTextBoxColumn.Name = "codigopuestoDataGridViewTextBoxColumn";
+            // 
+            // nombrepuestoDataGridViewTextBoxColumn
+            // 
+            this.nombrepuestoDataGridViewTextBoxColumn.DataPropertyName = "nombre_puesto";
+            this.nombrepuestoDataGridViewTextBoxColumn.HeaderText = "nombre_puesto";
+            this.nombrepuestoDataGridViewTextBoxColumn.Name = "nombrepuestoDataGridViewTextBoxColumn";
+            // 
+            // estatuspuestoDataGridViewTextBoxColumn
+            // 
+            this.estatuspuestoDataGridViewTextBoxColumn.DataPropertyName = "estatus_puesto";
+            this.estatuspuestoDataGridViewTextBoxColumn.HeaderText = "estatus_puesto";
+            this.estatuspuestoDataGridViewTextBoxColumn.Name = "estatuspuestoDataGridViewTextBoxColumn";
+            // 
             // frmPuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,9 +250,14 @@
             this.Controls.Add(this.labelIdaplicacion);
             this.Name = "frmPuesto";
             this.Text = "frmPuesto";
+            this.Load += new System.EventHandler(this.frmPuesto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gbxEstado.ResumeLayout(false);
             this.gbxEstado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puestoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +278,13 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelNombreaplicacion;
         private System.Windows.Forms.Label labelIdaplicacion;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource dataSet1BindingSource;
+        private DataSet2 dataSet2;
+        private System.Windows.Forms.BindingSource puestoBindingSource;
+        private DataSet2TableAdapters.puestoTableAdapter puestoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigopuestoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombrepuestoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estatuspuestoDataGridViewTextBoxColumn;
     }
 }
