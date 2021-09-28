@@ -30,32 +30,32 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.codigopuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrepuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatuspuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.puestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet2 = new CapaVista.DataSet2();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.gbxEstado = new System.Windows.Forms.GroupBox();
-            this.btnInhabilitado = new System.Windows.Forms.RadioButton();
-            this.btnHabilitado = new System.Windows.Forms.RadioButton();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelNombreaplicacion = new System.Windows.Forms.Label();
             this.labelIdaplicacion = new System.Windows.Forms.Label();
             this.dataSet1 = new CapaVista.DataSet1();
             this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet2 = new CapaVista.DataSet2();
-            this.puestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.puestoTableAdapter = new CapaVista.DataSet2TableAdapters.puestoTableAdapter();
-            this.codigopuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombrepuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estatuspuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnHabilitado = new System.Windows.Forms.RadioButton();
+            this.btnInhabilitado = new System.Windows.Forms.RadioButton();
+            this.gbxEstado = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.gbxEstado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.puestoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.puestoBindingSource)).BeginInit();
+            this.gbxEstado.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -72,6 +72,34 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(525, 150);
             this.dataGridView1.TabIndex = 49;
+            // 
+            // codigopuestoDataGridViewTextBoxColumn
+            // 
+            this.codigopuestoDataGridViewTextBoxColumn.DataPropertyName = "codigo_puesto";
+            this.codigopuestoDataGridViewTextBoxColumn.HeaderText = "codigo_puesto";
+            this.codigopuestoDataGridViewTextBoxColumn.Name = "codigopuestoDataGridViewTextBoxColumn";
+            // 
+            // nombrepuestoDataGridViewTextBoxColumn
+            // 
+            this.nombrepuestoDataGridViewTextBoxColumn.DataPropertyName = "nombre_puesto";
+            this.nombrepuestoDataGridViewTextBoxColumn.HeaderText = "nombre_puesto";
+            this.nombrepuestoDataGridViewTextBoxColumn.Name = "nombrepuestoDataGridViewTextBoxColumn";
+            // 
+            // estatuspuestoDataGridViewTextBoxColumn
+            // 
+            this.estatuspuestoDataGridViewTextBoxColumn.DataPropertyName = "estatus_puesto";
+            this.estatuspuestoDataGridViewTextBoxColumn.HeaderText = "estatus_puesto";
+            this.estatuspuestoDataGridViewTextBoxColumn.Name = "estatuspuestoDataGridViewTextBoxColumn";
+            // 
+            // puestoBindingSource
+            // 
+            this.puestoBindingSource.DataMember = "puesto";
+            this.puestoBindingSource.DataSource = this.dataSet2;
+            // 
+            // dataSet2
+            // 
+            this.dataSet2.DataSetName = "DataSet2";
+            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnLimpiar
             // 
@@ -110,7 +138,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(27, 20);
             this.textBox3.TabIndex = 45;
-            this.textBox3.Visible = false;
             // 
             // textBox2
             // 
@@ -118,40 +145,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(212, 20);
             this.textBox2.TabIndex = 40;
-            // 
-            // gbxEstado
-            // 
-            this.gbxEstado.BackColor = System.Drawing.Color.Transparent;
-            this.gbxEstado.Controls.Add(this.btnInhabilitado);
-            this.gbxEstado.Controls.Add(this.btnHabilitado);
-            this.gbxEstado.Location = new System.Drawing.Point(237, 143);
-            this.gbxEstado.Name = "gbxEstado";
-            this.gbxEstado.Size = new System.Drawing.Size(200, 100);
-            this.gbxEstado.TabIndex = 44;
-            this.gbxEstado.TabStop = false;
-            this.gbxEstado.Text = "Estado Aplicacion";
-            // 
-            // btnInhabilitado
-            // 
-            this.btnInhabilitado.AutoSize = true;
-            this.btnInhabilitado.Location = new System.Drawing.Point(115, 41);
-            this.btnInhabilitado.Name = "btnInhabilitado";
-            this.btnInhabilitado.Size = new System.Drawing.Size(79, 17);
-            this.btnInhabilitado.TabIndex = 4;
-            this.btnInhabilitado.TabStop = true;
-            this.btnInhabilitado.Text = "Inhabilitado";
-            this.btnInhabilitado.UseVisualStyleBackColor = true;
-            // 
-            // btnHabilitado
-            // 
-            this.btnHabilitado.AutoSize = true;
-            this.btnHabilitado.Location = new System.Drawing.Point(7, 41);
-            this.btnHabilitado.Name = "btnHabilitado";
-            this.btnHabilitado.Size = new System.Drawing.Size(72, 17);
-            this.btnHabilitado.TabIndex = 3;
-            this.btnHabilitado.TabStop = true;
-            this.btnHabilitado.Text = "Habilitado";
-            this.btnHabilitado.UseVisualStyleBackColor = true;
             // 
             // btnInsertar
             // 
@@ -176,9 +169,9 @@
             this.labelNombreaplicacion.BackColor = System.Drawing.Color.Transparent;
             this.labelNombreaplicacion.Location = new System.Drawing.Point(132, 90);
             this.labelNombreaplicacion.Name = "labelNombreaplicacion";
-            this.labelNombreaplicacion.Size = new System.Drawing.Size(99, 13);
+            this.labelNombreaplicacion.Size = new System.Drawing.Size(83, 13);
             this.labelNombreaplicacion.TabIndex = 43;
-            this.labelNombreaplicacion.Text = "Nombre Aplicación:";
+            this.labelNombreaplicacion.Text = "Nombre Puesto:";
             // 
             // labelIdaplicacion
             // 
@@ -186,9 +179,9 @@
             this.labelIdaplicacion.BackColor = System.Drawing.Color.Transparent;
             this.labelIdaplicacion.Location = new System.Drawing.Point(132, 52);
             this.labelIdaplicacion.Name = "labelIdaplicacion";
-            this.labelIdaplicacion.Size = new System.Drawing.Size(73, 13);
+            this.labelIdaplicacion.Size = new System.Drawing.Size(51, 13);
             this.labelIdaplicacion.TabIndex = 42;
-            this.labelIdaplicacion.Text = "ID Aplicación:";
+            this.labelIdaplicacion.Text = "txtCodigo";
             // 
             // dataSet1
             // 
@@ -200,37 +193,43 @@
             this.dataSet1BindingSource.DataSource = this.dataSet1;
             this.dataSet1BindingSource.Position = 0;
             // 
-            // dataSet2
-            // 
-            this.dataSet2.DataSetName = "DataSet2";
-            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // puestoBindingSource
-            // 
-            this.puestoBindingSource.DataMember = "puesto";
-            this.puestoBindingSource.DataSource = this.dataSet2;
-            // 
             // puestoTableAdapter
             // 
             this.puestoTableAdapter.ClearBeforeFill = true;
             // 
-            // codigopuestoDataGridViewTextBoxColumn
+            // btnHabilitado
             // 
-            this.codigopuestoDataGridViewTextBoxColumn.DataPropertyName = "codigo_puesto";
-            this.codigopuestoDataGridViewTextBoxColumn.HeaderText = "codigo_puesto";
-            this.codigopuestoDataGridViewTextBoxColumn.Name = "codigopuestoDataGridViewTextBoxColumn";
+            this.btnHabilitado.AutoSize = true;
+            this.btnHabilitado.Location = new System.Drawing.Point(7, 41);
+            this.btnHabilitado.Name = "btnHabilitado";
+            this.btnHabilitado.Size = new System.Drawing.Size(72, 17);
+            this.btnHabilitado.TabIndex = 3;
+            this.btnHabilitado.TabStop = true;
+            this.btnHabilitado.Text = "Habilitado";
+            this.btnHabilitado.UseVisualStyleBackColor = true;
             // 
-            // nombrepuestoDataGridViewTextBoxColumn
+            // btnInhabilitado
             // 
-            this.nombrepuestoDataGridViewTextBoxColumn.DataPropertyName = "nombre_puesto";
-            this.nombrepuestoDataGridViewTextBoxColumn.HeaderText = "nombre_puesto";
-            this.nombrepuestoDataGridViewTextBoxColumn.Name = "nombrepuestoDataGridViewTextBoxColumn";
+            this.btnInhabilitado.AutoSize = true;
+            this.btnInhabilitado.Location = new System.Drawing.Point(115, 41);
+            this.btnInhabilitado.Name = "btnInhabilitado";
+            this.btnInhabilitado.Size = new System.Drawing.Size(79, 17);
+            this.btnInhabilitado.TabIndex = 4;
+            this.btnInhabilitado.TabStop = true;
+            this.btnInhabilitado.Text = "Inhabilitado";
+            this.btnInhabilitado.UseVisualStyleBackColor = true;
             // 
-            // estatuspuestoDataGridViewTextBoxColumn
+            // gbxEstado
             // 
-            this.estatuspuestoDataGridViewTextBoxColumn.DataPropertyName = "estatus_puesto";
-            this.estatuspuestoDataGridViewTextBoxColumn.HeaderText = "estatus_puesto";
-            this.estatuspuestoDataGridViewTextBoxColumn.Name = "estatuspuestoDataGridViewTextBoxColumn";
+            this.gbxEstado.BackColor = System.Drawing.Color.Transparent;
+            this.gbxEstado.Controls.Add(this.btnInhabilitado);
+            this.gbxEstado.Controls.Add(this.btnHabilitado);
+            this.gbxEstado.Location = new System.Drawing.Point(237, 143);
+            this.gbxEstado.Name = "gbxEstado";
+            this.gbxEstado.Size = new System.Drawing.Size(200, 100);
+            this.gbxEstado.TabIndex = 44;
+            this.gbxEstado.TabStop = false;
+            this.gbxEstado.Text = "Estado Puesto";
             // 
             // frmPuesto
             // 
@@ -252,12 +251,12 @@
             this.Text = "frmPuesto";
             this.Load += new System.EventHandler(this.frmPuesto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.gbxEstado.ResumeLayout(false);
-            this.gbxEstado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.puestoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.puestoBindingSource)).EndInit();
+            this.gbxEstado.ResumeLayout(false);
+            this.gbxEstado.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,9 +270,6 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.GroupBox gbxEstado;
-        private System.Windows.Forms.RadioButton btnInhabilitado;
-        private System.Windows.Forms.RadioButton btnHabilitado;
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelNombreaplicacion;
@@ -286,5 +282,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codigopuestoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrepuestoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estatuspuestoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.RadioButton btnHabilitado;
+        private System.Windows.Forms.RadioButton btnInhabilitado;
+        private System.Windows.Forms.GroupBox gbxEstado;
     }
 }

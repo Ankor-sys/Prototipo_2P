@@ -35,7 +35,7 @@
   <ItemGroup>
     <Reference Include="CapaVista, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Prototipo2\CapaVista\bin\Debug\CapaVista.dll</HintPath>
+      <HintPath>..\..\PrototipoFinal\CapaVista\bin\Debug\CapaVista.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

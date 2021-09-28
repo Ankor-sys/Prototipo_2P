@@ -30,10 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.codigoempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigopuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigodepartamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sueldoempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new CapaVista.DataSet1();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.gbxEstado = new System.Windows.Forms.GroupBox();
             this.btnInhabilitado = new System.Windows.Forms.RadioButton();
@@ -42,19 +50,17 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelNombreaplicacion = new System.Windows.Forms.Label();
             this.labelIdaplicacion = new System.Windows.Forms.Label();
-            this.dataSet1 = new CapaVista.DataSet1();
-            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empleadoTableAdapter = new CapaVista.DataSet1TableAdapters.empleadoTableAdapter();
-            this.codigoempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigopuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigodepartamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sueldoempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estatusempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.gbxEstado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            this.gbxEstado.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -70,138 +76,10 @@
             this.sueldoempleadoDataGridViewTextBoxColumn,
             this.estatusempleadoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.empleadoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(144, 273);
+            this.dataGridView1.Location = new System.Drawing.Point(124, 248);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(525, 150);
             this.dataGridView1.TabIndex = 49;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(594, 119);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiar.TabIndex = 48;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(594, 90);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 47;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(594, 56);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 46;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(443, 184);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(27, 20);
-            this.textBox3.TabIndex = 45;
-            this.textBox3.Visible = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(237, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 20);
-            this.textBox2.TabIndex = 40;
-            // 
-            // gbxEstado
-            // 
-            this.gbxEstado.BackColor = System.Drawing.Color.Transparent;
-            this.gbxEstado.Controls.Add(this.btnInhabilitado);
-            this.gbxEstado.Controls.Add(this.btnHabilitado);
-            this.gbxEstado.Location = new System.Drawing.Point(237, 143);
-            this.gbxEstado.Name = "gbxEstado";
-            this.gbxEstado.Size = new System.Drawing.Size(200, 100);
-            this.gbxEstado.TabIndex = 44;
-            this.gbxEstado.TabStop = false;
-            this.gbxEstado.Text = "Estado Aplicacion";
-            // 
-            // btnInhabilitado
-            // 
-            this.btnInhabilitado.AutoSize = true;
-            this.btnInhabilitado.Location = new System.Drawing.Point(115, 41);
-            this.btnInhabilitado.Name = "btnInhabilitado";
-            this.btnInhabilitado.Size = new System.Drawing.Size(79, 17);
-            this.btnInhabilitado.TabIndex = 4;
-            this.btnInhabilitado.TabStop = true;
-            this.btnInhabilitado.Text = "Inhabilitado";
-            this.btnInhabilitado.UseVisualStyleBackColor = true;
-            // 
-            // btnHabilitado
-            // 
-            this.btnHabilitado.AutoSize = true;
-            this.btnHabilitado.Location = new System.Drawing.Point(7, 41);
-            this.btnHabilitado.Name = "btnHabilitado";
-            this.btnHabilitado.Size = new System.Drawing.Size(72, 17);
-            this.btnHabilitado.TabIndex = 3;
-            this.btnHabilitado.TabStop = true;
-            this.btnHabilitado.Text = "Habilitado";
-            this.btnHabilitado.UseVisualStyleBackColor = true;
-            // 
-            // btnInsertar
-            // 
-            this.btnInsertar.Location = new System.Drawing.Point(594, 27);
-            this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(75, 23);
-            this.btnInsertar.TabIndex = 41;
-            this.btnInsertar.Text = "Insertar";
-            this.btnInsertar.UseVisualStyleBackColor = true;
-            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(237, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 20);
-            this.textBox1.TabIndex = 39;
-            // 
-            // labelNombreaplicacion
-            // 
-            this.labelNombreaplicacion.AutoSize = true;
-            this.labelNombreaplicacion.BackColor = System.Drawing.Color.Transparent;
-            this.labelNombreaplicacion.Location = new System.Drawing.Point(132, 90);
-            this.labelNombreaplicacion.Name = "labelNombreaplicacion";
-            this.labelNombreaplicacion.Size = new System.Drawing.Size(99, 13);
-            this.labelNombreaplicacion.TabIndex = 43;
-            this.labelNombreaplicacion.Text = "Nombre Aplicación:";
-            // 
-            // labelIdaplicacion
-            // 
-            this.labelIdaplicacion.AutoSize = true;
-            this.labelIdaplicacion.BackColor = System.Drawing.Color.Transparent;
-            this.labelIdaplicacion.Location = new System.Drawing.Point(132, 52);
-            this.labelIdaplicacion.Name = "labelIdaplicacion";
-            this.labelIdaplicacion.Size = new System.Drawing.Size(73, 13);
-            this.labelIdaplicacion.TabIndex = 42;
-            this.labelIdaplicacion.Text = "ID Aplicación:";
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // empleadoBindingSource
-            // 
-            this.empleadoBindingSource.DataMember = "empleado";
-            this.empleadoBindingSource.DataSource = this.dataSet1;
-            // 
-            // empleadoTableAdapter
-            // 
-            this.empleadoTableAdapter.ClearBeforeFill = true;
             // 
             // codigoempleadoDataGridViewTextBoxColumn
             // 
@@ -239,16 +117,204 @@
             this.estatusempleadoDataGridViewTextBoxColumn.HeaderText = "estatus_empleado";
             this.estatusempleadoDataGridViewTextBoxColumn.Name = "estatusempleadoDataGridViewTextBoxColumn";
             // 
+            // empleadoBindingSource
+            // 
+            this.empleadoBindingSource.DataMember = "empleado";
+            this.empleadoBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(713, 121);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 48;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(713, 92);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 47;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(713, 58);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 46;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // textBox6
+            // 
+            this.textBox6.Enabled = false;
+            this.textBox6.Location = new System.Drawing.Point(619, 72);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(27, 20);
+            this.textBox6.TabIndex = 45;
+            this.textBox6.Visible = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(123, 58);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(212, 20);
+            this.textBox2.TabIndex = 40;
+            // 
+            // gbxEstado
+            // 
+            this.gbxEstado.BackColor = System.Drawing.Color.Transparent;
+            this.gbxEstado.Controls.Add(this.btnInhabilitado);
+            this.gbxEstado.Controls.Add(this.btnHabilitado);
+            this.gbxEstado.Location = new System.Drawing.Point(413, 31);
+            this.gbxEstado.Name = "gbxEstado";
+            this.gbxEstado.Size = new System.Drawing.Size(200, 100);
+            this.gbxEstado.TabIndex = 44;
+            this.gbxEstado.TabStop = false;
+            this.gbxEstado.Text = "Status Empleado";
+            // 
+            // btnInhabilitado
+            // 
+            this.btnInhabilitado.AutoSize = true;
+            this.btnInhabilitado.Location = new System.Drawing.Point(115, 41);
+            this.btnInhabilitado.Name = "btnInhabilitado";
+            this.btnInhabilitado.Size = new System.Drawing.Size(79, 17);
+            this.btnInhabilitado.TabIndex = 4;
+            this.btnInhabilitado.TabStop = true;
+            this.btnInhabilitado.Text = "Inhabilitado";
+            this.btnInhabilitado.UseVisualStyleBackColor = true;
+            // 
+            // btnHabilitado
+            // 
+            this.btnHabilitado.AutoSize = true;
+            this.btnHabilitado.Location = new System.Drawing.Point(7, 41);
+            this.btnHabilitado.Name = "btnHabilitado";
+            this.btnHabilitado.Size = new System.Drawing.Size(72, 17);
+            this.btnHabilitado.TabIndex = 3;
+            this.btnHabilitado.TabStop = true;
+            this.btnHabilitado.Text = "Habilitado";
+            this.btnHabilitado.UseVisualStyleBackColor = true;
+            // 
+            // btnInsertar
+            // 
+            this.btnInsertar.Location = new System.Drawing.Point(713, 29);
+            this.btnInsertar.Name = "btnInsertar";
+            this.btnInsertar.Size = new System.Drawing.Size(75, 23);
+            this.btnInsertar.TabIndex = 41;
+            this.btnInsertar.Text = "Insertar";
+            this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(123, 13);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(212, 20);
+            this.textBox1.TabIndex = 39;
+            // 
+            // labelNombreaplicacion
+            // 
+            this.labelNombreaplicacion.AutoSize = true;
+            this.labelNombreaplicacion.BackColor = System.Drawing.Color.Transparent;
+            this.labelNombreaplicacion.Location = new System.Drawing.Point(18, 58);
+            this.labelNombreaplicacion.Name = "labelNombreaplicacion";
+            this.labelNombreaplicacion.Size = new System.Drawing.Size(47, 13);
+            this.labelNombreaplicacion.TabIndex = 43;
+            this.labelNombreaplicacion.Text = "Nombre:";
+            // 
+            // labelIdaplicacion
+            // 
+            this.labelIdaplicacion.AutoSize = true;
+            this.labelIdaplicacion.BackColor = System.Drawing.Color.Transparent;
+            this.labelIdaplicacion.Location = new System.Drawing.Point(18, 20);
+            this.labelIdaplicacion.Name = "labelIdaplicacion";
+            this.labelIdaplicacion.Size = new System.Drawing.Size(43, 13);
+            this.labelIdaplicacion.TabIndex = 42;
+            this.labelIdaplicacion.Text = "Codigo:";
+            // 
+            // empleadoTableAdapter
+            // 
+            this.empleadoTableAdapter.ClearBeforeFill = true;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(124, 138);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(212, 20);
+            this.textBox4.TabIndex = 51;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(12, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 13);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Codigo Departamento";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(19, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Codigo Puesto";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(123, 187);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(212, 20);
+            this.textBox5.TabIndex = 54;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(18, 187);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "Sueldo:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(124, 93);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(212, 20);
+            this.textBox3.TabIndex = 50;
+            // 
             // frmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.gbxEstado);
             this.Controls.Add(this.btnInsertar);
@@ -259,10 +325,10 @@
             this.Text = "frmEmpleado";
             this.Load += new System.EventHandler(this.frmEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.gbxEstado.ResumeLayout(false);
             this.gbxEstado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,7 +340,7 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.GroupBox gbxEstado;
         private System.Windows.Forms.RadioButton btnInhabilitado;
@@ -292,5 +358,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codigodepartamentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sueldoempleadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estatusempleadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

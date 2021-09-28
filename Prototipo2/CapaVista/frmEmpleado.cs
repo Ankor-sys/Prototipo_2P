@@ -13,7 +13,7 @@ namespace CapaVista
 {
     public partial class frmEmpleado : Form
     {
-        Controlador conPuesto = new Controlador();
+        Controlador conEmpleado = new Controlador();
         public frmEmpleado()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace CapaVista
         {
             try
             {
-
+               //conEmpleado.insertarEmpleado(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, float.Parse(textBox5.Text), textBox6.Text);
                 // conPuesto.insertarAplicacion(textBox1.Text, textBox2.Text, int.Parse(textBox3.Text), " ");
                 MessageBox.Show("Insercion realizada");
                 funLimpiar();
@@ -32,19 +32,19 @@ namespace CapaVista
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: Debes llenar todos los campos");
+                MessageBox.Show("Error: " + ex);
             }
             actualizarTabla();
         }
 
         private void btnHabilitado_CheckedChanged(object sender, EventArgs e)
         {
-            textBox3.Text = "1";
+            textBox6.Text = "1";
         }
 
         private void btnInhabilitado_CheckedChanged(object sender, EventArgs e)
         {
-            textBox3.Text = "0";
+            textBox6.Text = "0";
         }
 
         public void actualizarTabla()
@@ -72,13 +72,13 @@ namespace CapaVista
         {
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            textBox3.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            textBox6.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
-            if (textBox3.Text == "1")
+            if (textBox6.Text == "1")
             {
                 btnHabilitado.Checked = true;
             }
-            else if (textBox3.Text == "0")
+            else if (textBox6.Text == "0")
             {
                 btnInhabilitado.Checked = true;
             }
@@ -88,9 +88,13 @@ namespace CapaVista
         {
             textBox1.Text = "";
             textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+           
             btnHabilitado.Checked = false;
             btnInhabilitado.Checked = false;
-            textBox3.Text = "";
+            textBox6.Text = "";
 
         }
 
@@ -99,6 +103,45 @@ namespace CapaVista
             // TODO: esta línea de código carga datos en la tabla 'dataSet1.empleado' Puede moverla o quitarla según sea necesario.
             this.empleadoTableAdapter.Fill(this.dataSet1.empleado);
 
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //conEmpleado.modificarEmpleado(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, float.Parse(textBox5.Text), textBox6.Text);
+                // conPuesto.insertarAplicacion(textBox1.Text, textBox2.Text, int.Parse(textBox3.Text), " ");
+                MessageBox.Show("Modificacion realizada");
+                funLimpiar();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+            actualizarTabla();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conEmpleado.eliminarEmpleado(textBox1.Text);
+                // conPuesto.insertarAplicacion(textBox1.Text, textBox2.Text, int.Parse(textBox3.Text), " ");
+                MessageBox.Show("Eliminacion realizada");
+                funLimpiar();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+            actualizarTabla();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            funLimpiar();
         }
     }
 }

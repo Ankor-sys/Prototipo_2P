@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Odbc;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaControlador;
+using CapaModelo;
 
 namespace CapaVista
 {
     public partial class frmPuesto : Form
     {
-        Controlador conAplicacion = new Controlador();
+        Conexion cn = new Conexion();
+        Controlador con = new Controlador();
         public frmPuesto()
         {
             InitializeComponent();
@@ -93,14 +96,14 @@ namespace CapaVista
         {
             try
             {
-                conAplicacion.modificarAplicacion(textBox1.Text, textBox2.Text, int.Parse(textBox3.Text), " ");
+                con.modificarPuesto(textBox1.Text, textBox2.Text, int.Parse(textBox3.Text));
                 MessageBox.Show("Modificacion realizada");
                 funLimpiar();
                 actualizarTabla();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: Debes llenar todos los campos");
+                MessageBox.Show("Error: " + ex);
             }
         }
 
@@ -108,14 +111,14 @@ namespace CapaVista
         {
             try
             {
-                conAplicacion.eliminarAplicacion(textBox1.Text);
+                con.eliminarPuesto(textBox1.Text);
                 MessageBox.Show("Eliminacion realizada");
                 funLimpiar();
                 actualizarTabla();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: No has ingresado Id del registro a eliminar");
+                MessageBox.Show("Error: " + ex);
             }
         }
 
@@ -168,16 +171,19 @@ namespace CapaVista
             try
             {
 
-                conAplicacion.insertarAplicacion(textBox1.Text, textBox2.Text, int.Parse(textBox3.Text), " ");
+                con.insertarPuesto(textBox1.Text, textBox2.Text, int.Parse(textBox3.Text));
                 MessageBox.Show("Insercion realizada");
                 funLimpiar();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: Debes llenar todos los campos");
+                MessageBox.Show("Error:" + ex);
             }
             actualizarTabla();
         }
+
+
+     
     }
 }

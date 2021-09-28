@@ -9,41 +9,41 @@ namespace CapaControlador
 {
     public class Controlador
     {
-        private Sentencias sn = new Sentencias();
 
 
+        //Sentencias sn = new Sentencias();
         //Controlador Puestos
-        public void insertarPuesto(string Id, string Nombre, int Estado, string Ruta)
+
+        public void insertarPuesto(string Id, string Nombre, int Estado)
         {
-            sn.funInsertar(Id, Nombre, Estado, Ruta);
+          //sn.funInsertarPuesto(Id, Nombre, Estado);
         }
 
-        public void modificarPuesto(string Id, string Nombre, int Estado, string Ruta)
+        public void modificarPuesto(string Id, string Nombre, int Estado)
         {
-            sn.funModificar(Id, Nombre, Estado, Ruta);
+           // sn.funModificarP(Id, Nombre, Estado);
         }
 
         public void eliminarPuesto(string id)
         {
-            sn.funEliminar(id);
+           // sn.funEliminarP(id);
         }
-
 
         //Controlador Empleados
-        
-        public void insertarEmpleado(string Id, string Nombre, int Estado, string Ruta)
+
+        public void insertarEmpleado(string Id, string Nombre, string puesto, string departamento, float sueldo, string status) 
         {
-            sn.funInsertar(Id, Nombre, Estado, Ruta);
+            //sn.funInsertarE(Id, Nombre, puesto, departamento, sueldo, status);
         }
 
-        public void modificarEmpleado(string Id, string Nombre, int Estado, string Ruta)
+        public void modificarEmpleado(string Id, string Nombre, string puesto, string departamento, float sueldo, string status)
         {
-            sn.funModificar(Id, Nombre, Estado, Ruta);
+            //sn.funModificarE(Id, Nombre, puesto, departamento, sueldo, status);
         }
 
         public void eliminarEmpleado(string id)
         {
-            sn.funEliminar(id);
+           // sn.funEliminarE(id);
         }
     }
 }
