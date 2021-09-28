@@ -16,7 +16,7 @@ namespace ProyectoParcial_Ejecutable_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CapaVista.frmMdi());
+            Application.Run(new CapaVista.MDI());
         }
     }
 }

@@ -1,6 +1,0 @@
-D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaControlador\bin\Debug\CapaControlador.dll
-D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaControlador\bin\Debug\CapaControlador.pdb
-D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaControlador\obj\Debug\CapaControlador.csprojAssemblyReference.cache
-D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaControlador\obj\Debug\CapaControlador.csproj.CoreCompileInputs.cache
-D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaControlador\obj\Debug\CapaControlador.dll
-D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaControlador\obj\Debug\CapaControlador.pdb
