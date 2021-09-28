@@ -1,0 +1,11 @@
+D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaVista\bin\Debug\CapaVista.dll
+D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaVista\bin\Debug\CapaVista.pdb
+D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaVista\obj\Debug\CapaVista.csprojAssemblyReference.cache
+D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaVista\obj\Debug\CapaVista.csproj.CoreCompileInputs.cache
+D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaVista\obj\Debug\CapaVista.dll
+D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaVista\obj\Debug\CapaVista.pdb
+D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaVista\obj\Debug\CapaVista.frmMdi.resources
+D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaVista\obj\Debug\CapaVista.csproj.GenerateResource.cache
+D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaVista\bin\Debug\CapaControlador.dll
+D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaVista\bin\Debug\CapaControlador.pdb
+D:\UMG\Año4\Semestre 2\Analisis De Sistemas 2\SegundoParcialAS2\ProyectoParcial\CapaVista\obj\Debug\CapaVista.csproj.CopyComplete
